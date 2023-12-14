@@ -37,10 +37,10 @@ namespace GuL
     {
 
     public:
-        const float INVALID_TEMPERATURE = -273.15;
-        const float INVALID_HUMIDITY = -1;
-        const float TYPICAL_TEMPERATURE_ACCURACY = 0.2;
-        const float TYPICAL_HUMIDITY_ACCURACY = 2;
+        constexpr static float INVALID_TEMPERATURE = -273.15;
+        constexpr static float INVALID_HUMIDITY = -1;
+        constexpr static float TYPICAL_TEMPERATURE_ACCURACY = 0.2;
+        constexpr static float TYPICAL_HUMIDITY_ACCURACY = 2;
 
         enum CommunicatioReturnState
         {
