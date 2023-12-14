@@ -88,12 +88,12 @@
   ```cpp
         bool enableHeater();
   ```
-  Enable the heater
+  Enable the heater, (further details)[#heater-details] 
   
   ```cpp
         bool disableHeater();
   ```
-  Disable the heater
+  Disable the heater (further details)[#heater-details]
   
   ```cpp
         bool heaterEnabled();
@@ -158,6 +158,18 @@
     bool isAcquisitionReady();
   ```
   Returns false if the pin is not set or the DRDYn-Pin is high
+
+
+
+## Heater details
+See HDC1010 and HDC1080 Datasheet  
+> 8.3.3 Heater
+> The heater is an integrated resistive element that can be used to test the sensor or to drive condensation off the
+> sensor. The heater can be activated using HEAT, bit 13 in Configuration Register. The heater helps in reducing
+> the accumulated offset after long exposure at high humidity conditions.
+> Once enabled the heater is turned on only in the measurement mode. To have a reasonable increase of the
+> temperature it is suggested to increase the measurement data rate.
+
 
 ## What's Next
 
