@@ -26,6 +26,7 @@
  */
 
 #include <Arduino.h>
+#include <string>
 #include <vector>
 #include <Wire.h>
 
