@@ -2,7 +2,7 @@
     "name": "GuL_TI_Humidity_HDC10XX",
     "version": "1.1.2",
     "description": "An Arduino-Framework library to work with humidity sensors series HDC10XX of Texas Instruments.",
-    "keywords": "temperature, humidity, sensors",
+    "keywords": ["temperature", "humidity", "sensors"],
     "authors":
     {
       "name":  "Guido Lehne",
