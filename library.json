@@ -1,0 +1,23 @@
+{
+    "name": "GuL_TI_Humidity_HDC10XX",
+    "version": "1.1.2",
+    "description": "An Arduino-Framework library to work with humidity sensors series HDC10XX of Texas Instruments.",
+    "keywords": "temperature, humidity, sensors",
+    "authors":
+    {
+      "name":  "Guido Lehne",
+      "url":   "https://github.com/boeserfrosch",
+      "maintainer": true
+    },
+    "repository":
+    {
+      "type": "git",
+      "url": "https://github.com/boeserfrosch/GuL_TI_Humidity.git"
+    },
+    "homepage": "https://github.com/boeserfrosch/GuL_TI_Humidity",
+    "license": "GPL-3.0-or-later",
+    "frameworks": "arduino",
+    "platforms": ["esp8266", "esp32"],
+    "headers": ["HDC1010.h", "HDC1080.h"],
+    "examples": "examples/*/*.ino"
+}
