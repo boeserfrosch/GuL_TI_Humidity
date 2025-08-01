@@ -17,7 +17,7 @@
     "homepage": "https://github.com/boeserfrosch/GuL_TI_Humidity",
     "license": "GPL-3.0-or-later",
     "frameworks": "arduino",
-    "platforms": ["esp8266", "esp32"],
+    "platforms": ["espressif8266", "espressif32"],
     "headers": ["HDC1010.h", "HDC1080.h"],
     "examples": "examples/*/*.ino"
 }
