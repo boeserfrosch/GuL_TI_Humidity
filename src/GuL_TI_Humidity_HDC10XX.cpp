@@ -4,7 +4,6 @@ namespace GuL
 {
     GuL_TI_Humidity_HDC10XX::GuL_TI_Humidity_HDC10XX(TwoWire &wire) : _wire(wire)
     {
-        this->fetchConfig();
         _name = "HDC10XX";
     }
 

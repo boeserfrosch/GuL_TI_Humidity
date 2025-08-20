@@ -1,15 +1,16 @@
 #include <Arduino.h>
 #include <HDC1080.h>
+#include <Wire.h>
 
 GuL::HDC1080 hdc(Wire);
 
-std::string outputFormat = "Tempeprature \t= % 6f °C \n"
-                           "Humidity \t= % 6f %% \n"
+std::string outputFormat = "Tempeprature\t= %.6f degC \n"
+                           "Humidity\t= %.6f %% \n"
                            "\n";
 
 void setup()
 {
-    Serial.begin(9600);
+    Serial.begin(115200);
     Wire.begin();
 
     hdc.resetConfiguration();
@@ -22,7 +23,7 @@ void setup()
 void loop()
 {
     hdc.startAcquisition(GuL::HDC1080::Channel::BOTH);
-    delay(hdc.getConversionTime(GuL::HDC1080::Channel::BOTH) / 1000);
+    delay((hdc.getConversionTime(GuL::HDC1080::Channel::BOTH) / 1000) + 1);
 
     float temperature = hdc.getTemperature();
     float humidity = hdc.getHumidity();

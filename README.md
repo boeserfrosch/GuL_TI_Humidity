@@ -16,17 +16,17 @@
    #include <HDC1010.h> // Or HDC1080.h
    ```
    
-2. Create a instance with the serial port it uses
+2. Create a instance with the i2c peripheral it uses
 ```cpp
-  //The modul uses the namespace GuL, instead of Serial1 you can use Serial, Serial2, or own instantiated HardwareSerial or SoftwareSerial
+  //The module uses the namespace GuL, instead of Wire you can use Wirel, Wire2, or your own instantiated i2c object
    GuL::HDC1010 hdc(Wire); 
 ```
    
-3. In `setup()`, basic setup of the modul.  
+3. In `setup()`, basic setup of the module.  
    
    ```cpp
    void setup() {
-      Wire.begin();
+     Wire.begin();
      hdc.resetConfiguration();
      hdc.enableHeater();
      hdc.setHumidityResolution(GuL::HDC1080::HumidityMeasurementResolution::HUM_RES_14BIT);
@@ -40,12 +40,12 @@
    ```cpp
    void loop() {
      hdc.startAcquisition(GuL::HDC1080::Channel::BOTH);
-     delay(hdc.getConversionTime(GuL::HDC1080::Channel::BOTH)/1000);
+     delay((hdc.getConversionTime(GuL::HDC1080::Channel::BOTH)/1000)+1);
 
      float temperature = hdc.getTemperature();
      float humidity = hdc.getHumidity();
 
-     Serial.printf("%f °C \n %f % \n",temperature,humidity);
+     Serial.printf("%f degC \n %f %% \n",temperature,humidity);
    }
    ```   
 
